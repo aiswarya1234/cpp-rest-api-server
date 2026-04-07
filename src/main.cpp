@@ -1,7 +1,7 @@
 #include "crow.h"
 #include "user_controller.h"
 #include "user_service.h"
-
+using namespace crow;
 int main() {
     crow::SimpleApp app;
 
