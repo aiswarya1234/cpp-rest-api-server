@@ -1,6 +1,6 @@
-using namespace crow;
-#include "user_controller.h"
 
+#include "user_controller.h"
+using namespace crow;
 UserController::UserController(UserService& svc) : service(svc) {}
 
 void UserController::registerRoutes(crow::SimpleApp& app) {
