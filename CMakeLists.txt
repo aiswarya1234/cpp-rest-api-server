@@ -5,6 +5,12 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(Threads REQUIRED)
 
-add_executable(app src/main.cpp)
+include_directories(src)
+
+add_executable(app
+    src/main.cpp
+    src/user_service.cpp
+    src/user_controller.cpp
+)
 
 target_link_libraries(app Threads::Threads)
