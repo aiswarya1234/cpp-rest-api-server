@@ -1,3 +1,4 @@
+using namespace crow;
 #include "user_controller.h"
 
 UserController::UserController(UserService& svc) : service(svc) {}
