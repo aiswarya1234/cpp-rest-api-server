@@ -19,7 +19,7 @@ void UserController::registerRoutes(crow::SimpleApp& app) {
         res["id"] = user.id;
         res["name"] = user.name;
 
-        return crow::response(201, res);
+        return crow::response(201, res.dump());
     });
 
     CROW_ROUTE(app, "/users")
@@ -35,7 +35,7 @@ void UserController::registerRoutes(crow::SimpleApp& app) {
             i++;
         }
 
-        return crow::response(res);
+        return crow::response(res.dump());
     });
 
     CROW_ROUTE(app, "/users/<int>")
@@ -50,7 +50,7 @@ void UserController::registerRoutes(crow::SimpleApp& app) {
         res["id"] = user->id;
         res["name"] = user->name;
 
-        return crow::response(res);
+        return crow::response(res.dump());
     });
 
     CROW_ROUTE(app, "/users/<int>").methods("DELETE"_method)
